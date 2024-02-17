@@ -53,6 +53,9 @@ export default function App() {
             </Text>
           </TouchableOpacity>
         </View>
+        <View>
+          <Text>MARAVILHOSO</Text>
+        </View>
       </Animatable.View>
 
       <StatusBar style="auto" />
