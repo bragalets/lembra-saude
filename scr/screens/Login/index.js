@@ -4,7 +4,8 @@ import {
   Text,
   StyleSheet,
   Image,
-  TouchableOpacity 
+  TouchableOpacity,
+  TextInput 
 } from 'react-native';
 
 
@@ -22,18 +23,31 @@ export default function Login() {
         <Image
           source={require('../../assets/DoctorImage.png')}
           style={{ width: '100%', height: 380 }}
-          resizeMode='contain'
-          />
+          resizeMode='contain'/>
       </View>
 
       <View style={styles.containerAcess}>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Acessar</Text>
-        </TouchableOpacity>
-        
+      
+        <Text style={styles.emailTitle}>E-mail</Text>
+
+          <TextInput style={styles.emailInput}
+          placeholder='Digite seu e-mail'>
+          </TextInput>
+
+        <Text style={styles.pwdTitle}>Senha</Text>
+
+          <TextInput style={styles.pwdInput}
+            placeholder='Digite sua senha'
+            secureTextEntry={true}>
+
+          </TextInput>
+
+          <TouchableOpacity style={styles.buttonLogin}>
+            <Text style={{color: '#FFFFFF', fontWeight: '500', textAlign: 'center', marginTop: 10}}>Entrar</Text>
+          </TouchableOpacity>
+       
       </View>
       
-
 
     </View>
   );
@@ -47,14 +61,14 @@ const styles = StyleSheet.create({
 
   containerForm:{
     flex:1,
-    backgroundColor: 'blue',
+    //backgroundColor: 'blue',
     justifyContent: 'center',
     alignItems: 'center'
   },
 
   containerLogo:{
     flex:3,
-    backgroundColor: 'red' 
+    //backgroundColor: 'red' 
   },
 
   containerAcess:{
@@ -67,13 +81,65 @@ const styles = StyleSheet.create({
   },
 
   title:{
-    fontSize: 48,
+    paddingTop: '4%',
+    fontSize: 50,
     fontWeight: 'bold',
     color: 'white'
   },
 
   subtitle:{
     fontSize:18,
+    fontWeight: '300',
     color: 'white'
+  },
+
+  emailTitle:{
+    alignSelf: 'baseline',
+    paddingTop: '4%',
+    paddingLeft: '12%',
+    fontWeight: '300'
+  },
+
+  emailInput:{
+    marginTop: 4,
+    alignSelf: 'center',
+    borderWidth: 1,
+    borderColor: '#6371EB',
+    width: 254,
+    height: 40,
+    borderRadius: 49,
+    textAlign: 'center',
+    color: '#6371EB'
+  },
+
+  pwdTitle:{
+    alignSelf:'baseline',
+    paddingTop: '4%',
+    paddingLeft: '12%',
+    fontWeight: '300'
+  },
+
+  pwdInput:{
+    marginTop: 4,
+    alignSelf: 'center',
+    borderWidth: 1,
+    borderColor: '#6371EB',
+    width: 254,
+    height: 40,
+    borderRadius: 49,
+    textAlign: 'center',
+    color: '#6371EB'
+  },
+
+  buttonLogin:{
+    alignSelf: 'center',
+    marginTop: 20,
+    backgroundColor: '#4515EB',
+    borderWidth: 1,
+    width: 254,
+    height: 40,
+    borderRadius: 49,
+    borderColor: '#4515EB'
   }
+
 })
