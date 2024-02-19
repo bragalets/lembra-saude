@@ -8,6 +8,7 @@ import {
   TextInput 
 } from 'react-native';
 
+import * as Animatable from 'react-native-animatable'
 
 export default function Login() {
   return(
@@ -20,13 +21,14 @@ export default function Login() {
       </View>
 
       <View style={styles.containerLogo}>
-        <Image
+        <Animatable.Image
+          animation={'flipInY'}
           source={require('../../assets/DoctorImage.png')}
           style={{ width: '100%', height: 380 }}
           resizeMode='contain'/>
       </View>
 
-      <View style={styles.containerAcess}>
+      <Animatable.View delay={600} animation={'fadeInUp'} style={styles.containerAcess}>
       
         <Text style={styles.emailTitle}>E-mail</Text>
 
@@ -46,7 +48,7 @@ export default function Login() {
             <Text style={{color: '#FFFFFF', fontWeight: '500', textAlign: 'center', marginTop: 10}}>Entrar</Text>
           </TouchableOpacity>
        
-      </View>
+      </Animatable.View>
       
 
     </View>
