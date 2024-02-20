@@ -9,8 +9,11 @@ import {
 } from 'react-native';
 
 import * as Animatable from 'react-native-animatable'
+import { useNavigation } from '@react-navigation/native';
 
 export default function Login() {
+  const navigation = useNavigation();
+
   return(
     <View style={styles.container}>
       
@@ -44,7 +47,10 @@ export default function Login() {
 
           </TextInput>
 
-          <TouchableOpacity style={styles.buttonLogin}>
+          <TouchableOpacity 
+            style={styles.buttonLogin}
+            onPress={() => navigation.navigate('Dashboard')}
+          >
             <Text style={{color: '#FFFFFF', fontWeight: '500', textAlign: 'center', marginTop: 10}}>Entrar</Text>
           </TouchableOpacity>
        
