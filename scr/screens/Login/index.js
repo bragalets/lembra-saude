@@ -26,7 +26,7 @@ export default function Login() {
       <View style={styles.containerLogo}>
         <Animatable.Image
           animation={''}
-          source={require('../../assets/Group 15.png')}
+          source={require('../../assets/Group 12.png')}
           style={{ width: '100%', height: '100%' }}
           resizeMode='cover'/>
           

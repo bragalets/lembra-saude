@@ -15,40 +15,53 @@ export default function Dashboard() {
   return(
     <View style={styles.container}>
       <View>
-        <StatusBar backgroundColor='#6370EB' barStyle='light-content'/>   
+        <StatusBar backgroundColor='#FFFFFF' barStyle='dark-content'/>   
       </View>
 
-      <View style={styles.bgcolor01}>
-       <View style={styles.containerFormProntuario}>
-            <Text style={styles.title}>Escolha uma opção</Text>
-            <Text style={styles.subtitle}>Resultado de Exames</Text>
-            <Animatable.Image delay={10} animation={'fadeInUp'} style={styles.imageProntuario}
-              source={require('../../assets/ProntuarioImage.png')}
-            />
+
+      <View style={styles.topBackground}>
+        <Image
+          source={require('../../assets/Group 15.png')}
+          style={{ width: '100%', height: '50%' }}
+          resizeMode='contain'
+        />
+      </View>
+
+
+      <View style={styles.helloText}>
+        <Text style={styles.helloPhrase}>Olá,</Text>
+        <Text style={styles.helloName}>Letícia!</Text>
+      </View>
+
+
+      <View style={styles.optionText}>
+        <Text>Escolha uma opção</Text>
+      </View>
+
+
+      <View style={styles.buttonExams}>
+        <TouchableOpacity>
+          <Text>Resultado</Text>
+          <Text>de Exames</Text>
+        </TouchableOpacity>
+      </View>
+
+
+      <View style={styles.buttonAgenda}>
+        <TouchableOpacity>
+          <Text>Agenda de</Text>
+          <Text>Consultas</Text>
+        </TouchableOpacity>
         </View>
-      </View>
 
-      <View style={styles.bgcolor02}>
-        <View style={styles.containerFormAgendadeConsultas}>
-          <Text style={styles.titleAgenda}>Agenda de Consultas</Text>
-          <Animatable.Image delay={10} animation={'fadeInUp'} style={styles.imageCalendario}
-            source={require('../../assets/CalendarioImage.png')}
-          />
+
+        <View>
+          <Image
+          source={require('../../assets/Group 16.png')}
+          style={{ width: '100%', height: '70%' }}
+          resizeMode='contain'/>
         </View>
 
-      </View>
-
-      <View style={styles.bgcolor03}>
-        <View style={styles.containerFormLembretes}>
-          <Text style={styles.titleLembretes}>Lembretes</Text>
-          <Animatable.Image delay={10} animation={'fadeInUp'} style={styles.imageLembretes}
-            source={require('../../assets/MemoriaImage.png')}
-          />
-        </View>
-      </View>
-
-     
-    
     </View>
     
     
@@ -56,96 +69,56 @@ export default function Dashboard() {
 }
 
 const styles = StyleSheet.create({
-  container:{
+    container:{
     flex:1,
-    backgroundColor: '#156FEB'
-  },
+    backgroundColor: '#FFFFFF'
+    },
 
-  bgcolor01:{flex:1,
-  backgroundColor: '#4515EB'},
+    topBackground:{
+      bottom: '2%',
+      paddingRight: '2%'
+    },
 
-  bgcolor02:{flex:1,
-  backgroundColor: '#156FEB'},
-
-  bgcolor03:{flex:1,
-  backgroundColor: '#156FEB'},
-
-  containerFormProntuario:{
-    flex:2,
-    backgroundColor: '#6370EB',
-    borderBottomLeftRadius: 45
-  },
-
-  imageProntuario:{
-    width: 300,
-    height: 200,
-    position: 'absolute',
-    bottom: -14,
-    marginLeft: 90   
-  },
-
-
-  title:{
-    paddingTop: '6%',
-    paddingLeft: '4%',
-    fontWeight: '300',
-    color: '#FFFFFF',
-    fontSize: 18
-  },
-
-  subtitle:{
-    paddingTop: '2%',
-    paddingLeft: '4%',
-    fontWeight: 'bold',
-    fontSize: 40,
-    color:'#FFFFFF'
-  },
-
-  titleAgenda:{
-    paddingTop: '6%',
-    paddingLeft: '4%',
-    fontWeight: 'bold',
-    color: '#FFFFFF',
-    fontSize: 40
-
-  },
-
-  imageCalendario:{
-    width: 250,
-    height: 200,
-    position: 'absolute',
-    bottom: -14,
-    marginLeft: 130
-  },
-
-  containerFormAgendadeConsultas:{
-    flex:2,
-    backgroundColor: '#4515EB',
-    borderBottomLeftRadius: 45
-  },
-
-  imageLembretes:{
-    width: 290,
-    height: 200,
-    position: 'absolute',
-    bottom: 0,
-    marginLeft: 80
-  },
-
-
-  titleLembretes:{
-      paddingTop: '6%',
+    helloPhrase:{
+      //backgroundColor: '#F8C301',
+      fontSize: 50,
+      textAlign:'left',
       paddingLeft: '4%',
-      fontWeight: 'bold',
-      color: '#FFFFFF',
-      fontSize: 40
+      bottom: 260,
+      fontWeight:'300',
+      color: '#000742'
+    },
 
-  },
+    helloName:{
+      //backgroundColor: '#0252B8',
+      fontSize: 50,
+      textAlign:'left',
+      paddingLeft: '4%',
+      bottom: 270,
+      fontWeight:'bold',
+      color: '#000742'
+    },
 
-  containerFormLembretes:{
-    flex:2,
-    backgroundColor: '#156FEB'
-    
-  }
+    optionText:{
+      backgroundColor: '#F8C301',
+      fontSize: 50,
+      borderWidth: 1,
+    borderColor: 'red'
+    },
+
+    buttonExams:{
+      backgroundColor: '#0252B8'
+    },
+
+    buttonAgenda:{
+      backgroundColor: '#F8C301'
+    }
+
+
+
+
+
+
+
 
 })
