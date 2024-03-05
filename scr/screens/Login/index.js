@@ -25,13 +25,14 @@ export default function Login() {
 
       <View style={styles.containerLogo}>
         <Animatable.Image
-          animation={'flipInY'}
-          source={require('../../assets/DoctorImage.png')}
-          style={{ width: '100%', height: 380 }}
-          resizeMode='contain'/>
+          animation={''}
+          source={require('../../assets/Group 15.png')}
+          style={{ width: '100%', height: '100%' }}
+          resizeMode='cover'/>
+          
       </View>
 
-      <Animatable.View delay={600} animation={'fadeInUp'} style={styles.containerAcess}>
+      <Animatable.View delay={600} animation={''} style={styles.containerAcess}>
       
         <Text style={styles.emailTitle}>E-mail</Text>
 
@@ -64,7 +65,7 @@ export default function Login() {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    backgroundColor: '#6371EB'
+    backgroundColor: '#000742'
   },
 
   containerForm:{
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
   },
 
   title:{
-    paddingTop: '4%',
+    paddingTop: '0%',
     fontSize: 50,
     fontWeight: 'bold',
     color: 'white'
@@ -112,12 +113,12 @@ const styles = StyleSheet.create({
     marginTop: 4,
     alignSelf: 'center',
     borderWidth: 1,
-    borderColor: '#6371EB',
+    borderColor: '#000742',
     width: 254,
     height: 40,
     borderRadius: 49,
     textAlign: 'center',
-    color: '#6371EB'
+    color: '#000742'
   },
 
   pwdTitle:{
@@ -131,23 +132,23 @@ const styles = StyleSheet.create({
     marginTop: 4,
     alignSelf: 'center',
     borderWidth: 1,
-    borderColor: '#6371EB',
+    borderColor: '#000742',
     width: 254,
     height: 40,
     borderRadius: 49,
     textAlign: 'center',
-    color: '#6371EB'
+    color: '#000742'
   },
 
   buttonLogin:{
     alignSelf: 'center',
     marginTop: 20,
-    backgroundColor: '#4515EB',
+    backgroundColor: '#000742',
     borderWidth: 1,
     width: 254,
     height: 40,
     borderRadius: 49,
-    borderColor: '#4515EB'
+    borderColor: '#000742'
   }
 
 })

@@ -21,8 +21,8 @@ export default function Dashboard() {
       <View style={styles.bgcolor01}>
        <View style={styles.containerFormProntuario}>
             <Text style={styles.title}>Escolha uma opção</Text>
-            <Text style={styles.subtitle}>Prontuário</Text>
-            <Image style={styles.imageProntuario}
+            <Text style={styles.subtitle}>Resultado de Exames</Text>
+            <Animatable.Image delay={10} animation={'fadeInUp'} style={styles.imageProntuario}
               source={require('../../assets/ProntuarioImage.png')}
             />
         </View>
@@ -31,7 +31,7 @@ export default function Dashboard() {
       <View style={styles.bgcolor02}>
         <View style={styles.containerFormAgendadeConsultas}>
           <Text style={styles.titleAgenda}>Agenda de Consultas</Text>
-          <Image style={styles.imageCalendario}
+          <Animatable.Image delay={10} animation={'fadeInUp'} style={styles.imageCalendario}
             source={require('../../assets/CalendarioImage.png')}
           />
         </View>
@@ -41,7 +41,7 @@ export default function Dashboard() {
       <View style={styles.bgcolor03}>
         <View style={styles.containerFormLembretes}>
           <Text style={styles.titleLembretes}>Lembretes</Text>
-          <Image style={styles.imageLembretes}
+          <Animatable.Image delay={10} animation={'fadeInUp'} style={styles.imageLembretes}
             source={require('../../assets/MemoriaImage.png')}
           />
         </View>
