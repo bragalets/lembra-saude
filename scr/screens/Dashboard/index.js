@@ -52,7 +52,7 @@ export default function Dashboard() {
 
 
         <View style={styles.buttonAgenda}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('AgendaDeConsultas')}>
             <Text style={styles.buttonTextAgenda}>Agenda de Consultas</Text>
           </TouchableOpacity>
         </View>
@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
     height: 120,
     alignSelf: 'center',
     bottom: 240,
+    borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20
@@ -129,8 +130,8 @@ const styles = StyleSheet.create({
   buttonTextExams: {
     color: 'white',
     paddingLeft: '5%',
-    paddingTop: '2%',
-    fontSize: 35,
+    paddingTop: '5%',
+    fontSize: 30,
     fontWeight: 'bold'
 
   },
@@ -141,6 +142,7 @@ const styles = StyleSheet.create({
     height: 120,
     alignSelf: 'center',
     bottom: 200,
+    borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20
@@ -149,8 +151,8 @@ const styles = StyleSheet.create({
   buttonTextAgenda: {
     color: 'white',
     paddingLeft: '5%',
-    paddingTop: '2%',
-    fontSize: 35,
+    paddingTop: '5%',
+    fontSize: 30,
     fontWeight: 'bold'
   },
 

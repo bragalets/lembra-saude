@@ -12,13 +12,13 @@ import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native';
 
 
-export default function ResultadoDeExames() {
+export default function AgendaDeConsultas() {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.headerText}>Resultado de Exames</Text>
-      {/* Adicione outros elementos ou componentes aqui */}
+      <Text style={styles.headerText}>Uhuuuuu :D </Text>
+    
     </View>
   );
 }
